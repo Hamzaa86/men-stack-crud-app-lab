@@ -1,0 +1,17 @@
+<body> 
+  <a href="/foods">All The Foods</a> 
+  <h1>Edit <%= food.name %></h1> 
+  <form action="/foods/<%= food._id %>?_method=PUT" method="POST"> 
+      <label for="name">Name:</label> 
+      <input type="text" id="name" name="name" value="<%= food.name %>" required> 
+      <br><br> 
+      <label for="description">Description:</label> 
+      <textarea id="description" name="description" required><%= food.description %></textarea> 
+      <br><br> 
+      <label for="image">Image URL:</label> 
+      <input type="text" id="image" name="image" value="<%= food.image %>"> 
+      <br><br> 
+      <button type="submit">Update Food</button> 
+  </form> 
+  <a href="/foods/<%= food._id %>">Cancel</a>
+</body>

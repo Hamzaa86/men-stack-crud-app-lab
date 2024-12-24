@@ -1,0 +1,12 @@
+<body>
+  <a href="/foods/new">Add New Food</a>
+  <a href="/">Home</a>
+  <h1>All Foods</h1>
+  <ul>
+    <% foods.forEach(food => { %>
+    <a href="/foods/<%= food._id %>">
+      <li><%= food.name %></li>
+    </a>
+    <% }) %>
+  </ul>
+</body>
